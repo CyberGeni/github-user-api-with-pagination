@@ -2,13 +2,13 @@ import { useReducer, useEffect } from "react";
 import { useErrorHandler } from "react-error-boundary";
 
 
-let initial = { docs: [], loading: false };
+let initial = { user: [], loading: false };
 const fetchReducer = (state, action) => {
   switch (action.type) {
     case "LOADING":
       return { ...state, loading: action.payload };
     case "SETDATA":
-      return { docs: action.payload, loading: false };
+      return { user: action.payload, loading: false };
       default:
         return state
   }

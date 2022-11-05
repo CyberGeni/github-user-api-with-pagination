@@ -1,8 +1,8 @@
+import Profile from "../components/Profile";
+
 function Home() {
   return ( 
-    <div>
-      
-    </div>
+    <Profile />
    );
 }
 
