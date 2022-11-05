@@ -8,11 +8,6 @@ function RepositoryInfo() {
   let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{doc.name} Repository details</title>
-        <meta name="description" content="a single repo details" />
-      </Helmet>
       <div className="repo_de">
         <div className="flex space-btw">
           <div className="flex no-space">
@@ -124,7 +119,7 @@ function RepositoryInfo() {
           view repository on githbub
         </a>
       </div>
-    </HelmetProvider>
+
   );
 }
 export default RepositoryInfo;
