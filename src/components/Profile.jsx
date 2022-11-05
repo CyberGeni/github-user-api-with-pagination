@@ -9,9 +9,9 @@ function Profile() {
 
   return (
     <>
-      {loading && <p className="loading">loading</p>}
+      {loading && <p className="bg-[#141c2f]">loading</p>}
       {user && (
-        <div className="bg-[#141c2f] text-slate-300 h-screen flex flex-col items-center justify-center">
+        <div className="bg-[#141c2f] text-slate-300 h-screen flex flex-col items-center justify-center font-['Space_Grotesk']">
           <main className="bg-[#1f2a48] w-4/5 rounded-lg p-12">
             <section className="flex items-center space-x-8">
               <img 
@@ -59,10 +59,12 @@ function Profile() {
                 <p>{user.email}</p>
               </div>
             </section>
+
+            <button className="mx-auto w-full mt-9">
+                <Link to="/repositories" className="border rounded px-5 py-3 hover:ring-2 hover:px-7 transition-all">View repositories</Link>
+            </button>
           </main>
-          <button>
-            <Link to="/repositories">Repositories</Link>
-          </button>
+          
         </div>
       )}
     </>
