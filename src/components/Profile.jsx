@@ -12,14 +12,14 @@ function Profile() {
       {loading && <p className="bg-[#141c2f]">loading</p>}
       {user && (
         <div className="bg-[#141c2f] text-slate-300 h-screen flex flex-col items-center justify-center font-['Space_Grotesk']">
-          <main className="bg-[#1f2a48] w-4/5 rounded-lg p-12 md:max-w-3xl lg:max-w-4xl">
-            <section className="flex items-center space-x-8">
+          <main className="bg-[#1f2a48] w-10/12 rounded-lg p-6 sm:p-12 md:max-w-3xl lg:max-w-4xl">
+            <section className="flex items-center space-x-4 sm:space-x-8">
               <img 
-                className="rounded-full w-28"
+                className="rounded-full w-20 sm:w-28"
                 src={user.avatar_url} 
                 alt={user.name} />
               <div>
-                <h1 className="text-3xl font-bold mb-1">{user.name}</h1>
+                <h1 className="text-xl sm:text-3xl font-bold mb-1">{user.name}</h1>
                 <a href={user.html_url} className="text-blue-500">@{user.login}</a>
                 {/* user url if needed  */}
                 <p>Joined 25 August 2020</p>
@@ -27,20 +27,20 @@ function Profile() {
             </section>
 
             <section>
-              <p className="mt-4">{user.bio}</p>
+              <p className="mt-4 text-md sm:text-base">{user.bio}</p>
             </section>
 
-            <section className="bg-[#141c2f] rounded-md grid grid-cols-3 px-8 py-6 my-6">
+            <section className="bg-[#141c2f] rounded-md grid grid-cols-3 px-4 sm:px-8 py-6 my-6">
               <div>
-                <span>Repos</span>
+                <span className="text-sm sm:text-base">Repos</span>
                 <h1 className="text-2xl font-semibold text-white">{user.public_repos}</h1>
               </div>
               <div>
-                <span>Followers</span>
+                <span className="text-sm sm:text-base">Followers</span>
                 <h1 className="text-2xl font-semibold text-white">{user.followers}</h1>
               </div>
               <div>
-                <span>Following</span>
+                <span className="text-sm sm:text-base">Following</span>
                 <h1 className="text-2xl font-semibold text-white">{user.following}</h1>
               </div>
             </section>
@@ -60,7 +60,7 @@ function Profile() {
               </div>
             </section>
 
-            <button className="mx-auto w-full mt-9">
+            <button className="mx-auto w-full mt-9 mb-4">
                 <Link to="/repositories" className="border rounded px-5 py-3 hover:ring-2 hover:px-7 transition-all">View repositories</Link>
             </button>
           </main>
