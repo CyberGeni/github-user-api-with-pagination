@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 
 function Repositories() {
   const [page, setPage] = useState(1);
-  let url = `https://api.github.com/users/cybergeni/repos?page=${page}&per_page=10`;
+  let url = `https://api.github.com/users/cybergeni/repos?page=${page}&per_page=12&results=120`;
   const { state } = useFetch(url);
   const { loading, user } = state;
   let pages = 8;
@@ -46,7 +46,7 @@ function Repositories() {
                         <button
                             disabled={page <= 1}
                             onClick={() => setPage((prev) => prev - 1)}
-                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] disabled:bg-gray-800 disabled:text-gray-600"
                         >
                             prev
                         </button>
@@ -64,7 +64,7 @@ function Repositories() {
                         <button
                             disabled={page >= 8}
                             onClick={() => setPage((prev) => prev + 1)}
-                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] hover:bg-[#1f2a48] disabled:bg-gray-800 disabled:text-gray-600"
                         >
                             next
                         </button>
