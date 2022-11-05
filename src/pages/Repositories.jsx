@@ -11,60 +11,65 @@ function Repositories() {
   let pages = 8;
   return (
     <>
-        <h2 className="padd">Repositories</h2>
-        <div className="repolist_container padd">
-          {loading && <p className="loading">loading</p>}
-
-          <div className="repo">
-            {user &&
-              user.map((doc) => (
-                <div key={doc.id} className="repository">
-                  <Link
-                    to={`cybergeni/${doc.name}`}
-                    state={{ doc: doc }}
-                    className="flex no-space lin"
-                  >
-                    <img
-                      src={doc.owner.avatar_url}
-                      alt={doc.login}
-                      className="repo_avatar"
-                    />
-                    <div className="">
-                      <p className="accent">{doc.owner.login}</p>
-                      <p className="outlet_link"> {doc.name}</p>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            <div className="btn_wrap">
-              <button
-                disabled={page <= 1}
-                onClick={() => setPage((prev) => prev - 1)}
-                className="btn"
-              >
-                prev
-              </button>
-              {Array.from({ length: pages }, (value, index) => index + 1).map(
-                (btn) => (
-                  <button
-                    key={btn}
-                    onClick={() => setPage(btn)}
+        <div>
+            {loading && <p className="">loading</p>}
+            <main className="bg-[#141c2f] text-slate-300 font-['Space_Grotesk'] min-h-screen p-10">
+                <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {user &&
+                    user.map((doc) => (
+                        <div key={doc.id} className="bg-[#1f2a48] rounded-md p-4">
+                            <Link
+                                to={`cybergeni/${doc.name}`}
+                                state={{ doc: doc }}
+                            >
+                                <div>
+                                    <h1 className="text-sm font-semibold text-slate-500 mb-1">AUTHOR</h1>
+                                    <div className="flex items-center">
+                                        <img
+                                            src={doc.owner.avatar_url}
+                                            alt={doc.login}
+                                            className="w-8 h-8 mr-2 rounded-full"
+                                        />
+                                        <p className="text-slate-200">{doc.owner.login}</p>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <h1 className="text-sm font-semibold text-slate-500">REPOSITORY NAME</h1>  
+                                    <p className="text-md font-semibold text-slate-50">{doc.name}</p> 
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </section>
+                
+                <div className="btn_wrap">
+                <button
+                    disabled={page <= 1}
+                    onClick={() => setPage((prev) => prev - 1)}
                     className="btn"
-                  >
-                    {btn}
-                  </button>
-                )
-              )}
-              <button
-                disabled={page >= 8}
-                onClick={() => setPage((prev) => prev + 1)}
-                className="btn"
-              >
-                next
-              </button>
-            </div>
-          </div>
-
+                >
+                    prev
+                </button>
+                {Array.from({ length: pages }, (value, index) => index + 1).map(
+                    (btn) => (
+                    <button
+                        key={btn}
+                        onClick={() => setPage(btn)}
+                        className="btn"
+                    >
+                        {btn}
+                    </button>
+                    )
+                )}
+                <button
+                    disabled={page >= 8}
+                    onClick={() => setPage((prev) => prev + 1)}
+                    className="btn"
+                >
+                    next
+                </button>
+                </div>
+            </main>
           <Outlet />
         </div>
     </>

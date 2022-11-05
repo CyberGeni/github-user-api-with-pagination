@@ -12,7 +12,7 @@ function Profile() {
       {loading && <p className="bg-[#141c2f]">loading</p>}
       {user && (
         <div className="bg-[#141c2f] text-slate-300 h-screen flex flex-col items-center justify-center font-['Space_Grotesk']">
-          <main className="bg-[#1f2a48] w-4/5 rounded-lg p-12">
+          <main className="bg-[#1f2a48] w-4/5 rounded-lg p-12 md:max-w-3xl lg:max-w-4xl">
             <section className="flex items-center space-x-8">
               <img 
                 className="rounded-full w-28"
