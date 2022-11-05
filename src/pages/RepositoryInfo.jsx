@@ -9,7 +9,9 @@ function RepositoryInfo() {
 
   return (
     <div>
-      
+      <main>
+        
+      </main>
     </div>
       // <div className="repo_de">
       //   <div className="flex space-btw">

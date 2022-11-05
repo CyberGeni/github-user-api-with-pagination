@@ -41,36 +41,38 @@ function Repositories() {
                         </div>
                     ))}
                 </section>
-                
-                <div className="btn_wrap">
-                <button
-                    disabled={page <= 1}
-                    onClick={() => setPage((prev) => prev - 1)}
-                    className="btn"
-                >
-                    prev
-                </button>
-                {Array.from({ length: pages }, (value, index) => index + 1).map(
-                    (btn) => (
-                    <button
-                        key={btn}
-                        onClick={() => setPage(btn)}
-                        className="btn"
-                    >
-                        {btn}
-                    </button>
-                    )
-                )}
-                <button
-                    disabled={page >= 8}
-                    onClick={() => setPage((prev) => prev + 1)}
-                    className="btn"
-                >
-                    next
-                </button>
+                <div className="">
+                    <div className="border border-slate-700 rounded-lg w-4/5 sm:w-fit mx-auto my-12">
+                        <button
+                            disabled={page <= 1}
+                            onClick={() => setPage((prev) => prev - 1)}
+                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                        >
+                            prev
+                        </button>
+                        {Array.from({ length: pages }, (value, index) => index + 1).map(
+                            (btn) => (
+                            <button
+                                key={btn}
+                                onClick={() => setPage(btn)}
+                                className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                            >
+                                {btn}
+                            </button>
+                            )
+                        )}
+                        <button
+                            disabled={page >= 8}
+                            onClick={() => setPage((prev) => prev + 1)}
+                            className="px-6 py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                        >
+                            next
+                        </button>
+                    </div>
                 </div>
+                <Outlet />
             </main>
-          <Outlet />
+          
         </div>
     </>
   );
