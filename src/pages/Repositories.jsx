@@ -48,7 +48,7 @@ function Repositories() {
                             onClick={() => setPage((prev) => prev - 1)}
                             className="p-2 sm:px-6 sm:py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] disabled:bg-gray-800 disabled:text-gray-600"
                         >
-                            prev
+                            &lt;
                         </button>
                         {Array.from({ length: pages }, (value, index) => index + 1).map(
                             (btn) => (
@@ -66,11 +66,11 @@ function Repositories() {
                             onClick={() => setPage((prev) => prev + 1)}
                             className="p-2 sm:px-6 sm:py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] hover:bg-[#1f2a48] disabled:bg-gray-800 disabled:text-gray-600"
                         >
-                            next
+                            &gt;
                         </button>
                     </div>
                 </div>
-                <Outlet />
+               
             </main>
           
         </div>

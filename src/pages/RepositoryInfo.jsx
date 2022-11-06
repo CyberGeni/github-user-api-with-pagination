@@ -8,8 +8,8 @@ function RepositoryInfo() {
   let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
-<div className="relative flex items-center justify-center h-screen top-[-100vh] bg-[#141c2f] overflow-hidden">
-      <main className="absolute z-10 top-0 bg-[#1f2a48] grid grid-cols-2 shadow-md rounded-md my-auto p-8 mt-12 w-3/5">
+<div className="relative flex items-center justify-center h-screen top-[-200vh] bg-[#141c2f] overflow-hidden">
+      <main className="absolute z-10 top-0 bg-[#1f2a48] grid grid-cols-2 shadow-md rounded-md my-auto p-8 mt-12 sm:w-3/5">
         <div>
           <h1 className="text-sm font-semibold text-slate-500 mb-1">AUTHOR</h1>
           <div className="flex items-center">
