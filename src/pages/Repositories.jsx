@@ -13,7 +13,7 @@ function Repositories() {
   return (
     <>
       <Helmet>
-        <title>{doc.login}'s Repositories</title>
+        <title>`Cybergeni's Repositories`</title>
         <meta name="description" content="Here is a list of all the repositories" />
       </Helmet>
       <div>

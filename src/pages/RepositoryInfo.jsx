@@ -9,7 +9,7 @@ function RepositoryInfo() {
   let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
-    <div className="relative flex items-center justify-center h-screen top-[-200vh] bg-[#141c2f] overflow-hidden">
+    <div className="relative flex items-center justify-center h-screen top-[-100vh] bg-[#141c2f] overflow-hidden">
       <Helmet>
         <title>{doc.name} Info</title>
         <meta name="description" content={doc.description} />
