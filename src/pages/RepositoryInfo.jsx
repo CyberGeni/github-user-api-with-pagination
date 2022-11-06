@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 function RepositoryInfo() {
   const location = useLocation();
@@ -8,7 +9,11 @@ function RepositoryInfo() {
   let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
-<div className="relative flex items-center justify-center h-screen top-[-200vh] bg-[#141c2f] overflow-hidden">
+    <div className="relative flex items-center justify-center h-screen top-[-200vh] bg-[#141c2f] overflow-hidden">
+      <Helmet>
+        <title>{doc.name} Info</title>
+        <meta name="description" content={doc.description} />
+      </Helmet>
       <main className="absolute z-10 top-0 bg-[#1f2a48] grid grid-cols-2 shadow-md rounded-md my-auto p-8 mt-12 sm:w-3/5">
         <div>
           <h1 className="text-sm font-semibold text-slate-500 mb-1">AUTHOR</h1>
@@ -26,7 +31,7 @@ function RepositoryInfo() {
             REPOSITORY NAME
           </h1>
           <a href={doc.svn_url} target="_blank">
-               <p className="text-md font-semibold text-slate-50">{doc.name}</p>
+            <p className="text-md font-semibold text-slate-50">{doc.name}</p>
           </a>
         </div>
         <div className="mt-3">
@@ -50,13 +55,22 @@ function RepositoryInfo() {
           <p className="text-slate-200 capitalize ">{doc.language}</p>
         </div>
         <div className="mt-3 space-y-1">
-          <h1 className="text-sm font-semibold text-slate-500">REPOSITORY LINK</h1>
-          <a className="border border-slate-600 px-2 py-1 rounded-lg" href={doc.html_url} rel="noreferrer" target="_blank">View on Github</a>
+          <h1 className="text-sm font-semibold text-slate-500">
+            REPOSITORY LINK
+          </h1>
+          <a
+            className="border border-slate-600 px-2 py-1 rounded-lg"
+            href={doc.html_url}
+            rel="noreferrer"
+            target="_blank"
+          >
+            View on Github
+          </a>
         </div>
       </main>
     </div>
 
-    //   
+    //
     //     view repository on githbub
     //   </a>
     // </div>

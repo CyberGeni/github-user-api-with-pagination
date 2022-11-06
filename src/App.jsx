@@ -1,3 +1,4 @@
+import { HelmetProvider } from 'react-helmet-async';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Repositories from './pages/Repositories';
@@ -7,6 +8,7 @@ import TestError from './pages/TestError';
 
 function App () {
   return ( 
+    <HelmetProvider>
     <Router>
       <Routes>
         <Route 
@@ -37,7 +39,7 @@ function App () {
         Test Error
       </Link>
     </Router>
-    
+    </HelmetProvider>
    );
 }
 
