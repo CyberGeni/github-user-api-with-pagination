@@ -9,12 +9,12 @@ function RepositoryInfo() {
   let lastUpdate = new Date(doc.updated_at).toDateString()
 
   return (
-    <div className="relative flex items-center justify-center h-screen top-[-100vh] bg-[#141c2f] overflow-hidden">
+    <div className="relative flex items-center justify-center h-screen bg-[#141c2f] overflow-hidden">
       <Helmet>
         <title>{doc.name} Info</title>
         <meta name="description" content={doc.description} />
       </Helmet>
-      <main className="absolute z-10 top-0 bg-[#1f2a48] grid grid-cols-2 shadow-md rounded-md my-auto p-8 mt-12 sm:w-3/5">
+      <main className="absolute z-10 top-0 bg-[#1f2a48] grid grid-cols-1 sm:grid-cols-2 shadow-md rounded-md my-auto p-8 mt-12 w-10/12 sm:w-3/5">
         <div>
           <h1 className="text-sm font-semibold text-slate-500 mb-1">AUTHOR</h1>
           <div className="flex items-center">
@@ -54,8 +54,8 @@ function RepositoryInfo() {
           <h1 className="text-sm font-semibold text-slate-500">STACK</h1>
           <p className="text-slate-200 capitalize ">{doc.language}</p>
         </div>
-        <div className="mt-3 space-y-1">
-          <h1 className="text-sm font-semibold text-slate-500">
+        <div className="mt-3">
+          <h1 className="text-sm mb-2 font-semibold text-slate-500">
             REPOSITORY LINK
           </h1>
           <a

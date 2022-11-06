@@ -19,6 +19,7 @@ function Repositories() {
       <div>
         {loading && <p className="">loading</p>}
         <main className="bg-[#141c2f] text-slate-300 font-['Space_Grotesk'] min-h-screen p-10">
+        <Outlet />
           <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {user &&
               user.map((doc) => (
@@ -81,7 +82,7 @@ function Repositories() {
               </button>
             </div>
           </div>
-          <Outlet />
+          
         </main>
       </div>
     </>
