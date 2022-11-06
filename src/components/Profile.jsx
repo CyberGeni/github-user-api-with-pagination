@@ -30,7 +30,7 @@ function Profile() {
               <p className="mt-4 text-md sm:text-base">{user.bio}</p>
             </section>
 
-            <section className="bg-[#141c2f] rounded-md grid grid-cols-3 px-4 sm:px-8 py-6 my-6">
+            <section className="bg-[#141c2f] rounded-md grid grid-cols-3 px-4 sm:px-8 py-4 sm:py-6 my-6">
               <div>
                 <span className="text-sm sm:text-base">Repos</span>
                 <h1 className="text-2xl font-semibold text-white">{user.public_repos}</h1>

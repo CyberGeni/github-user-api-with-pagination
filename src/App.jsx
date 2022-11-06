@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Repositories from './pages/Repositories';
 import RepositoryInfo from './pages/RepositoryInfo';
 import PageNotAvailable from './pages/PageNotAvailable';
+import TestError from './pages/TestError';
 
 function App () {
   return ( 
@@ -24,6 +25,10 @@ function App () {
         <Route 
           path='*'
           element={<PageNotAvailable />}
+        />
+        <Route 
+          path='error'
+          element={<TestError />}
         />
       </Routes>
     </Router>
