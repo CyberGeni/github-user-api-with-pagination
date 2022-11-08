@@ -9,7 +9,7 @@ function Profile() {
 
   return (
     <>
-      {loading && <p className="bg-[#141c2f]">loading</p>}
+      {loading && <div className="h-screen bg-[#141c2f] flex text-center items-center justify-center text-white font-['Space_Grotesk']">one sec...</div>}
       {user && (
         <div className="bg-[#141c2f] text-slate-300 h-screen flex flex-col items-center justify-center font-['Space_Grotesk']">
           <main className="bg-[#1f2a48] w-10/12 rounded-lg p-6 sm:p-12 md:max-w-3xl lg:max-w-4xl">
