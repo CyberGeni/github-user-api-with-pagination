@@ -15,9 +15,9 @@ function RepositoryInfo() {
         <meta name="description" content={doc.description} />
       </Helmet>
       
-      <main className="bg-[#1f2a48] grid grid-cols-1 sm:grid-cols-2 shadow-md rounded-md p-8 mt-12 w-10/12 h-fit sm:w-3/5 sm:max-w-2xl">
+      <main className="bg-[#1f2a48] grid place-content-start grid-cols-1 sm:grid-cols-2 shadow-md rounded-md p-8 mt-12 w-10/12 h-fit sm:w-3/5 sm:max-w-2xl">
         <Link to="/repositories" className="col-span-2 w-fit -mt-24 -ml-8">
-          <span className="flex items-center justify-center text-slate-300 border border-slate-600 px-3 py-2 rounded-lg">
+          <span className="flex items-center justify-center text-slate-300 border hover:border-white transitioni-all border-slate-600 px-3 py-2 rounded-lg">
           <svg className="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z" fill="rgba(236,240,241,1)"/></svg>
             Go back</span>
         </Link>
@@ -61,7 +61,7 @@ function RepositoryInfo() {
           <p className="text-slate-200 capitalize ">{doc.language}</p>
         </div>
         <div className="mt-3">
-          <h1 className="text-sm mb-3 font-semibold text-slate-500">
+          <h1 className="text-sm mb-1 font-semibold text-slate-500">
             REPOSITORY LINK
           </h1>
           <a

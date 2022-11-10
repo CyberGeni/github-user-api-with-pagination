@@ -13,11 +13,13 @@ function Repositories() {
   return (
     <>
       <Helmet>
-        <title>`Cybergeni's Repositories`</title>
+        <title>Cybergeni's Repositories</title>
         <meta name="description" content="Here is a list of all the repositories" />
       </Helmet>
       <div>
-        {loading && <div className="h-screen flex text-center items-center justify-center bg-[#141c2f] text-white font-['Space_Grotesk'] ">it a'int like i'm serving you cookies 🙄</div>}
+        {loading && <div className="h-screen overflow-hidden flex text-center items-center justify-center bg-[#141c2f] text-white font-['Space_Grotesk'] ">
+          <span className="w-5 h-5 mr-2 border-4 border-white border-b-slate-600 rounded-full block border-box animate-spin"></span>
+          relax, it ain't like i'm offering you cookies 🙄</div>}
         <main className="bg-[#141c2f] text-slate-300 font-['Space_Grotesk'] min-h-screen p-10">
           {/* <Outlet /> */}
           <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -67,7 +69,7 @@ function Repositories() {
                   <button
                     key={btn}
                     onClick={() => setPage(btn)}
-                    className="px-2 sm:px-6 sm:py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
+                    className="px-2 sm:px-5 sm:py-4 active:bg-[#1f2a48] focus:bg-[#1f2a48] rounded"
                   >
                     {btn}
                   </button>

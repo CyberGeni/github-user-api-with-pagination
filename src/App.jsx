@@ -31,7 +31,7 @@ function App () {
         />
         {/* testing the error fallback component */}
         <Route 
-          path='error'
+          path='error' 
           element={<TestError />}
         />
       </Routes>
