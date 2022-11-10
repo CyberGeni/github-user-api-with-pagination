@@ -18,11 +18,12 @@ function App () {
         <Route 
           path="repositories"
           element={<Repositories />}>
-          <Route 
-            path="cybergeni/:id"
-            element={<RepositoryInfo />}
-          />
+          
         </Route>
+        <Route 
+            path="repositories/:id"
+            element={<RepositoryInfo />}
+        />
         {/* catch unregistered routes and display a 404 page component */}
         <Route 
           path='*'

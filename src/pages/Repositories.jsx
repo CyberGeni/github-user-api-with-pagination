@@ -1,9 +1,8 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { useState } from "react";
-import { Link, Outlet, Routes, Route } from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import RepositoryInfo from "./RepositoryInfo";
 
 function Repositories() {
   const [page, setPage] = useState(1);
@@ -20,6 +19,7 @@ function Repositories() {
       <div>
         {loading && <div className="h-screen flex text-center items-center justify-center bg-[#141c2f] text-white font-['Space_Grotesk'] ">it a'int like i'm serving you cookies 🙄</div>}
         <main className="bg-[#141c2f] text-slate-300 font-['Space_Grotesk'] min-h-screen p-10">
+          {/* <Outlet /> */}
           <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {user &&
               user.map((doc) => (
