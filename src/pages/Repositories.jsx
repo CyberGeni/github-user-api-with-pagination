@@ -1,8 +1,9 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import RepositoryInfo from "./RepositoryInfo";
 
 function Repositories() {
   const [page, setPage] = useState(1);
@@ -26,7 +27,7 @@ function Repositories() {
                   key={doc.id}
                   className="bg-[#1f2a48] shadow-md rounded-md p-4"
                 >
-                  <Link to={`cybergeni/${doc.name}`} state={{ doc: doc }}>
+                  <Link to={`${doc.name}`} state={{ doc: doc }}>
                     <div>
                       <h1 className="text-sm font-semibold text-slate-500 mb-1">
                         AUTHOR
@@ -83,6 +84,7 @@ function Repositories() {
           </div>
           
         </main>
+        
       </div>
     </>
   );
